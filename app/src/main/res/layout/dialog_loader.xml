@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="50dp"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_fileName="loader-progress.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:id="@+id/loader_progress_animation"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_fileName="loader-success.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:id="@+id/loader_success_animation"
+        android:visibility="gone"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_fileName="loader-failure.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:id="@+id/loader_failure_animation"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/alloy_bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/loader_msg_text_view"/>
+
+</LinearLayout>

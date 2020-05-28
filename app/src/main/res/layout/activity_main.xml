@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/app_icon"
+        android:id="@+id/main_image_view_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_app_name"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/chunk_five_rg"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="30dp"
+        android:id="@+id/main_text_view_app_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your pharmacy in your hand\nGuaranteed delivery in 120 minutes"
+        android:textSize="17sp"
+        android:fontFamily="@font/alloy_bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:id="@+id/main_text_view_tag_line"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_fileName="no-internet-connection.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        android:id="@+id/main_lottie_no_internet"/>
+
+</LinearLayout>

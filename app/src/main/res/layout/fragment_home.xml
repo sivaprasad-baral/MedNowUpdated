@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/home_fragment_edit_text_search"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingStart="10dp"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:background="@drawable/home_search_edit_text"
+            android:hint="Search stores"
+            android:textSize="15sp"
+            android:drawablePadding="15dp"
+            tools:ignore="RtlSymmetry"
+            android:inputType="text" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/home_fragment_view_pager"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"
+            android:overScrollMode="never"
+            android:clipToPadding="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_fragment_text_view_stores"
+            android:textSize="19sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_bold"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home_fragment_recycler_view"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

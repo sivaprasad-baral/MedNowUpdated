@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    tools:context=".ChemistChat">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chemist_chat_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/customer_chat_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/alloy_bold"
+                android:id="@+id/chemist_chat_text_view_pharmacy_name"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chemist_chat_recycler_view"
+        android:layout_below="@id/chemist_chat_appbar_layout"
+        android:layout_above="@id/chemist_chat_relative_layout_send_msg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:id="@+id/chemist_chat_relative_layout_send_msg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/chemist_chat_edit_text_message"
+            android:layout_toStartOf="@id/chemist_chat_button_send_msg"
+            android:paddingStart="15dp"
+            android:background="@drawable/chat_msg_field"
+            android:hint="Enter your message"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:endIconMode="clear_text"
+            android:importantForAutofill="no"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_send_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/chemist_chat_button_send_msg"
+            android:onClick="sendMsgBtn"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

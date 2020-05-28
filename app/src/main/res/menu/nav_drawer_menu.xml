@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/refer_menu"
+        android:title="Refer To A Friend"
+        android:icon="@drawable/ic_user_friends"/>
+
+    <item
+        android:id="@+id/profile_menu"
+        android:title="Your Account"
+        android:icon="@drawable/ic_account_circle_black_24dp"/>
+
+    <item
+        android:id="@+id/gifts_menu"
+        android:title="Your Gifts"
+        android:icon="@drawable/ic_gifts"/>
+
+    <item
+        android:id="@+id/help_menu"
+        android:title="Help"
+        android:icon="@drawable/ic_live_help_black_24dp"/>
+
+    <item
+        android:id="@+id/about_menu"
+        android:title="About Us"
+        android:icon="@drawable/ic_hand_point_right"/>
+
+    <item
+        android:id="@+id/rate_menu"
+        android:title="Rate Us"
+        android:icon="@drawable/ic_stars_black_24dp"/>
+
+    <item
+        android:id="@+id/logout_menu"
+        android:title="Logout"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+
+</menu>

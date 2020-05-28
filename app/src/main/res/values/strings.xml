@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MedNow</string>
+    <string name="display_app_name">M e d N o w</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">903996003407002</string>
+    <string name="fb_login_protocol_scheme">fb903996003407002</string>
+
+    <!-- Map -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBzvpfG5tdqZF4ax_bN5uGx0BXIHGoY818</string>
+
+    <!-- Login -->
+    <string name="terms_conditions">By continuing you agree to our\nTerms and Conditions</string>
+    <string name="title_activity_demo">Map</string>
+
+    <string name="toggle_btn">Show hide button</string>
+
+    <!---->
+    <string name="razor_pay_api">rzp_test_UzVBR4PzDTFxwc</string>
+</resources>

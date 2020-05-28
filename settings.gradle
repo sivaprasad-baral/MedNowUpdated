@@ -1,0 +1,2 @@
+rootProject.name='MedNow'
+include ':app', ':razorpay-android-3.8.10'

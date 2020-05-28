@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Location"
+    android:background="@color/colorPrimary"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Please wait"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/alloy_bold"
+        android:id="@+id/location_text_view_msg"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_fileName="location-not-found.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/location_lottie_gps_failure"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/location_text_view_msg"
+        android:layout_above="@id/location_button_confirm"
+        android:id="@+id/location_fragment_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textStyle="bold"
+        android:layout_above="@id/location_button_retry"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorPrimary"
+        android:backgroundTint="@android:color/white"
+        app:rippleColor="#AEAEAE"
+        android:id="@+id/location_button_confirm"
+        android:onClick="confirmBtn"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:backgroundTint="@android:color/white"
+        app:rippleColor="#AEAEAE"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/location_button_retry"
+        android:onClick="retryBtn"/>
+
+</RelativeLayout>

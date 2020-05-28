@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "92910092541",
+    "firebase_url": "https://mednow-mobile-app.firebaseio.com",
+    "project_id": "mednow-mobile-app",
+    "storage_bucket": "mednow-mobile-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92910092541:android:36424b09df288653c6fe94",
+        "android_client_info": {
+          "package_name": "com.example.mednow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92910092541-adsi1kpres0hnug6n48l01cj2pgo6cos.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mednow",
+            "certificate_hash": "ca0c96cc817823ea5a65ccb93da0cb9c73c70419"
+          }
+        },
+        {
+          "client_id": "92910092541-ibr1m9s9hncodi0op4k5sao5uvmovjvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBXAYwdJHuoBrAfOvJj7Tn9tOe-Jx3SLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92910092541-ibr1m9s9hncodi0op4k5sao5uvmovjvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
