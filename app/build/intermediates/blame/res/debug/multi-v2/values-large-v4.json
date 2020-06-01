@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Debi\\Desktop\\MedNow\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "C:\\Users\\sivaprasad\\AndroidStudioProjects\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\7473adfd169276ecdc16a6593075af02\\material-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\7473adfd169276ecdc16a6593075af02\\material-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

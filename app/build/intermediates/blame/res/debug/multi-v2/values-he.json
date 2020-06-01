@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Debi\\Desktop\\MedNow\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he\\values-he.xml",
+            "outputFile": "C:\\Users\\sivaprasad\\AndroidStudioProjects\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he\\values-he.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\9bc50e68af5c6618c266bd98b9319b84\\jetified-android-image-cropper-2.8.0\\res\\values-he\\values-he.xml",
+                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\9bc50e68af5c6618c266bd98b9319b84\\jetified-android-image-cropper-2.8.0\\res\\values-he\\values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Debi\\Desktop\\MedNow\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+            "outputFile": "C:\\Users\\sivaprasad\\AndroidStudioProjects\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\082567f0d8b8233a5041e72d23e532fb\\jetified-firebase-ui-auth-4.3.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\a3ea431beab6655154e6b642d1a59244\\jetified-firebase-ui-auth-4.3.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

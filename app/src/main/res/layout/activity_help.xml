@@ -148,7 +148,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Items are missing from my order?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="orderQueryThreeBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -161,6 +162,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
                             android:text="I want to modify my order?"
+                            android:onClick="orderQueryFourBtn"
                             android:gravity="center_vertical"
                             android:textSize="15sp"/>
 
@@ -176,21 +178,46 @@
                             android:layout_marginBottom="10dp"
                             android:text="Items are different from what I ordered?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="orderQueryFiveBtn"/>
 
                         <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/colorGreyBg"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:text="How can I do online payment?"
+                            android:text="When will i receive my order?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySixBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I am received damaged product?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySevenBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
 
                     </LinearLayout>
 
@@ -255,7 +282,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Order status shows 'Delivered' but i have not received my order?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="deliveryQueryOneBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -269,7 +297,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Which cities do we operate in?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="deliveryQueryTwoBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -283,7 +312,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Can I modify my address after I have placed my order?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="deliveryQueryThreeBtn"/>
 
                     </LinearLayout>
 
@@ -348,21 +378,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="What are the payment modes?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/colorGreyBg"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="When will I get refund?"
-                            android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="paymentQueryOneBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -376,7 +393,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="How can I make an online payment?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="paymentQueryTwoBtn"/>
 
                     </LinearLayout>
 
@@ -441,7 +459,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="How do I return my order?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="returnQueryOneBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -455,7 +474,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Which medicines are eligible for return?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="returnQueryTwoBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -469,7 +489,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="I am unable to initiate a return request?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="returnQueryThreeBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -483,7 +504,18 @@
                             android:layout_marginBottom="10dp"
                             android:text="Does MedNow pick up the products I want to return from my location?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="returnQueryFourBtn"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="When will I get refund?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="returnQueryFiveBtn"/>
 
                     </LinearLayout>
 
@@ -548,7 +580,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="What is MNO cash?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="walletQueryOneBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -562,7 +595,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="Can I add money to MedNow wallet?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="walletQueryTwoBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -576,7 +610,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="When will my cash expire?"
                             android:gravity="center_vertical"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:onClick="walletQueryThreeBtn"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -590,7 +625,741 @@
                             android:layout_marginBottom="10dp"
                             android:text="Can I transfer MNO cash to bank account?"
                             android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="walletQueryFourBtn"/>
+
+                        <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How do I check my MNO cash?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="walletQueryFiveBtn"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGreyBg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:onClick="showHidePrescriptionHelpBtn">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Prescription Query"
+                            android:textColor="@color/colorLightBlack"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/help_prescription_image_view_show_hide"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alloy_bold"
+                            android:layout_marginStart="20dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/help_prescription_image_view_show_hide"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:id="@+id/help_prescription_linear_layout_list"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Where do i send my prescription?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="prescriptionQueryOneBtn"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="What is a valid prescription?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="prescriptionQuerySevenBtn"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGreyBg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:onClick="showHideGeneralQueriesHelpBtn">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="General Queries"
+                            android:textColor="@color/colorLightBlack"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/help_general_queries_image_view_show_hide"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alloy_bold"
+                            android:layout_marginStart="20dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/help_general_queries_image_view_show_hide"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:id="@+id/help_general_queries_linear_layout_list"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Are there any shipping charges for order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="generalQueriesOneBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="What is MedNow?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="generalQueriesTwoBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Why did I not receive OTP on SMS?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="generalQueriesThreeBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How can I change my mail address linkd to my account?"
+                            android:onClick="generalQueriesFourBtn"
+                            android:gravity="center_vertical"
                             android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How do I become a partner?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="generalQueriesFiveBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="What is th procedure to place an order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="generalQueriesSixBtn"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGreyBg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:onClick="showHidePromotionHelpBtn">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Promotion"
+                            android:textColor="@color/colorLightBlack"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/help_promotion_image_view_show_hide"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alloy_bold"
+                            android:layout_marginStart="20dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/help_promotion_image_view_show_hide"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:id="@+id/help_promotion_linear_layout_list"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How can I track my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryOneBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How do I cancel my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryTwoBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are missing from my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryThreeBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I want to modify my order?"
+                            android:onClick="orderQueryFourBtn"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are different from what I ordered?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryFiveBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="When will i receive my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySixBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I am received damaged product?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySevenBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGreyBg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:onClick="showHideReferralsHelpBtn">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Referrals"
+                            android:textColor="@color/colorLightBlack"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/help_referrals_image_view_show_hide"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alloy_bold"
+                            android:layout_marginStart="20dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/help_referrals_image_view_show_hide"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:id="@+id/help_referrals_linear_layout_list"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How can I track my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryOneBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How do I cancel my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryTwoBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are missing from my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryThreeBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I want to modify my order?"
+                            android:onClick="orderQueryFourBtn"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are different from what I ordered?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryFiveBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="When will i receive my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySixBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I am received damaged product?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySevenBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGreyBg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:onClick="showHideTransactionIssuesHelpBtn">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transaction Issues"
+                            android:textColor="@color/colorLightBlack"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/help_transaction_issues_image_view_show_hide"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alloy_bold"
+                            android:layout_marginStart="20dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/help_transaction_issues_image_view_show_hide"
+                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGreyBg"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:id="@+id/help_transaction_issues_linear_layout_list"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How can I track my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryOneBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="How do I cancel my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryTwoBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are missing from my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryThreeBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I want to modify my order?"
+                            android:onClick="orderQueryFourBtn"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Items are different from what I ordered?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQueryFiveBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="When will i receive my order?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySixBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="I am received damaged product?"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:onClick="orderQuerySevenBtn"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGreyBg"/>
+
 
                     </LinearLayout>
 

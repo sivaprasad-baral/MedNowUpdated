@@ -77,7 +77,7 @@ public class Home extends AppCompatActivity {
                         // startActivity(new Intent(Home.this,Referral.class));
                         break;
                     case R.id.profile_menu:
-                        // startActivity(new Intent(Home.this,Profile.class));
+                         startActivity(new Intent(Home.this, Profile.class));
                         break;
                     case R.id.gifts_menu:
                         // startActivity(new Intent(Home.this,Gifts.class));
