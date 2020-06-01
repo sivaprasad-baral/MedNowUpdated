@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGreyBg"
+    tools:context=".Profile">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/view_profile"
+        android:background="@color/colorPrimary"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_activity_user_profile_pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            app:civ_border_width="2dp"
+            android:layout_marginHorizontal="20dp"
+            app:civ_border_color="@color/colorAccent"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_activity_user_profile_name"
+        android:fontFamily="@font/alloy_bold"
+        android:textSize="15sp"
+        android:layout_toRightOf="@+id/profile_activity_user_profile_pic"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prifile_activity_user_profile_email"
+        android:layout_toRightOf="@+id/profile_activity_user_profile_pic"
+        android:fontFamily="@font/alloy_bold"
+        android:textSize="12sp"
+        android:layout_below="@+id/profile_activity_user_profile_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="Edit"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="170dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_rectangle"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/view_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                >
+
+                <ImageView
+                    android:id="@+id/profile_activity_orders_image_view_show_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+                <View
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:background="@drawable/image_rounded"
+                   android:layout_alignParentStart="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="5dp">
+
+               </View>
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/image_rounded"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_discount"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Offers"
+                    android:textColor="@color/colorLightBlack"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/alloy_bold"
+                    android:layout_marginStart="40dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/profile_activity_offers_image_view_show_hide"
+                    android:src="@drawable/ic_arrow_forward_black_24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+            </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orders"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Gifts"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/profile_activity_your_gifts_image_view_show_hide"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_activity_your_gifts_image_view_show_hide"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit your profile"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/profile_activity_change_password_image_view_show_hide"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_activity_change_password_image_view_show_hide"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate us"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/profile_activity_rate_us_image_view_show_hide"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_activity_rate_us_image_view_show_hide"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:onClick="profileLogOutBtn">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/profile_activity_log_out_image_view_show_hide"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_activity_log_out_image_view_show_hide"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp">
+
+            </View>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/image_rounded"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_discount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About MedNow"
+                android:textColor="@color/colorLightBlack"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/profile_about_mednow_image_view_show_hide"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alloy_bold"
+                android:layout_marginStart="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_about_mednow_image_view_show_hide"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorGreyBg"/>
+
+
+
+     </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
