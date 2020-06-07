@@ -60,6 +60,9 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array crypto_fingerprint_fallback_prefixes
+array crypto_fingerprint_fallback_vendors
+array hide_fingerprint_instantly_prefixes
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -109,6 +112,7 @@ attr appBarLayoutStyle
 attr argType
 attr arrowHeadLength
 attr arrowShaftLength
+attr assetName
 attr autoCompleteTextViewStyle
 attr autoSizeMaxTextSize
 attr autoSizeMinTextSize
@@ -408,6 +412,8 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr failureImage
+attr failureImageInitScaleType
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -459,6 +465,7 @@ attr imageAspectRatio
 attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateProgressStyle
+attr initScaleType
 attr initialActivityCount
 attr insetForeground
 attr isLightTheme
@@ -650,11 +657,13 @@ attr navigationViewStyle
 attr nullable
 attr number
 attr numericModifiers
+attr optimizeDisplay
 attr overlapAnchor
 attr paddingBottomNoButtons
 attr paddingEnd
 attr paddingStart
 attr paddingTopNoTitle
+attr panEnabled
 attr panelBackground
 attr panelMenuListTheme
 attr panelMenuListWidth
@@ -671,12 +680,27 @@ attr popupMenuBackground
 attr popupMenuStyle
 attr popupTheme
 attr popupWindowStyle
+attr ppvBackgroundColor
+attr ppvCounterclockwise
+attr ppvImage
+attr ppvInverted
+attr ppvMax
+attr ppvProgress
+attr ppvProgressColor
+attr ppvProgressFillType
+attr ppvShowStroke
+attr ppvShowText
+attr ppvStartAngle
+attr ppvStrokeColor
+attr ppvStrokeWidth
+attr ppvTypeface
 attr preserveIconSpacing
 attr pressedTranslationZ
 attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
 attr queryHint
+attr quickScaleEnabled
 attr radioButtonStyle
 attr rangeFillColor
 attr ratingBarStyle
@@ -717,6 +741,7 @@ attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
+attr src
 attr srcCompat
 attr stackFromEnd
 attr startDestination
@@ -773,6 +798,7 @@ attr tabStyle
 attr tabTextAppearance
 attr tabTextColor
 attr tabUnboundedRipple
+attr tapToRetry
 attr targetPackage
 attr textAllCaps
 attr textAppearanceBody1
@@ -809,9 +835,11 @@ attr thickness
 attr thumbTextPadding
 attr thumbTint
 attr thumbTintMode
+attr thumbnailScaleType
 attr tickMark
 attr tickMarkTint
 attr tickMarkTintMode
+attr tileBackgroundColor
 attr tint
 attr tintMode
 attr title
@@ -863,6 +891,7 @@ attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
 attr zOrderOnTop
+attr zoomEnabled
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
@@ -898,6 +927,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color biometric_error_color
 color bottom_nav_selector
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -948,6 +978,10 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color default_background_color
+color default_progress_color
+color default_stroke_color
+color default_text_color
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1266,6 +1300,7 @@ dimen disabled_alpha_material_light
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen fingerprint_icon_size
 dimen fui_auth_method_button_drawablePadding
 dimen fui_auth_method_button_margin
 dimen fui_auth_method_button_width
@@ -1615,6 +1650,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fingerprint_dialog_error_to_fp
+drawable fingerprint_dialog_fp_to_error
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_check_circle_black_128dp
 drawable fui_ic_facebook_white_22dp
@@ -1635,14 +1672,19 @@ drawable googleg_standard_color_18
 drawable home_search_edit_text
 drawable ic_account_balance_wallet_black_24dp
 drawable ic_account_circle_black_24dp
+drawable ic_add_box_black_24dp
 drawable ic_arrow_forward_black_24dp
 drawable ic_arrow_right
 drawable ic_bhim
 drawable ic_calendar_black_24dp
 drawable ic_camera_alt_black_24dp
+drawable ic_camera_alt_grey_24dp
 drawable ic_clear_black_24dp
+drawable ic_close_black_24dp
 drawable ic_comment
 drawable ic_credit_card_black_24dp
+drawable ic_discount
+drawable ic_done_black_24dp
 drawable ic_edit_black_24dp
 drawable ic_edit_location_black_24dp
 drawable ic_facebook
@@ -1651,6 +1693,7 @@ drawable ic_hand_point_right
 drawable ic_hands_helping
 drawable ic_history_black_24dp
 drawable ic_home_black_24dp
+drawable ic_indeterminate_check_box_black_24dp
 drawable ic_key
 drawable ic_keyboard_arrow_down_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
@@ -1659,8 +1702,10 @@ drawable ic_keyboard_arrow_up_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_live_help_black_24dp
+drawable ic_local_phone_black_24dp
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
+drawable ic_mode_edit_black_24dp
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1674,6 +1719,7 @@ drawable ic_send_black_24dp
 drawable ic_stars_black_24dp
 drawable ic_user_friends
 drawable image_not_available
+drawable image_rounded
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1792,8 +1838,6 @@ id automatic
 id barrier
 id beginning
 id blocking
-id border_card1
-id border_card2
 id bottom
 id box_count
 id browser_actions_header_text
@@ -1885,6 +1929,9 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialog_accept_reject_btn_cancel
+id dialog_accept_reject_btn_continue
+id dialog_accept_reject_text_view_msg
 id dialog_button
 id dimensions
 id direct
@@ -1913,8 +1960,15 @@ id fill_horizontal
 id fill_vertical
 id filled
 id filter_chip
+id fingerprint_description
+id fingerprint_error
+id fingerprint_icon
+id fingerprint_subtitle
 id fitCenter
+id fitEnd
+id fitStart
 id fitToContents
+id fitXY
 id fixed
 id forever
 id fragment_container_view_tag
@@ -1956,7 +2010,9 @@ id help_wallet_image_view_show_hide
 id help_wallet_linear_layout_list
 id hideable
 id historyFragment
-id history_frament_recycler_view
+id history_btn_manage
+id history_fragment_no_order_msg
+id history_fragment_recycler_view
 id history_image_view_pharmacy_img
 id history_text_view_med_names
 id history_text_view_med_price
@@ -1973,8 +2029,13 @@ id home_drawer_layout
 id home_fragment_edit_text_search
 id home_fragment_image_view_pharmacy_image
 id home_fragment_recycler_view
+id home_fragment_text_view_discount
+id home_fragment_text_view_distance
+id home_fragment_text_view_pharmacy_contact_no
 id home_fragment_text_view_pharmacy_name
+id home_fragment_text_view_pharmacy_rating
 id home_fragment_text_view_stores
+id home_fragment_text_view_time
 id home_fragment_view_pager
 id home_fragment_view_pager_image_view
 id home_header_image_view_profile_image
@@ -1998,6 +2059,7 @@ id item_touch_helper_previous_elevation
 id labeled
 id large
 id largeLabel
+id layout_profile
 id left
 id light
 id line1
@@ -2074,6 +2136,9 @@ id off
 id on
 id onTouch
 id open_graph
+id order_payment_layout_bill_amt
+id order_payment_text_view_bill_amt
+id order_payment_text_view_total_amt
 id otp_verify_circular_view_timer
 id otp_verify_edit_text_otp
 id otp_verify_text_view_resend
@@ -2094,21 +2159,21 @@ id phone_button
 id phone_layout
 id phone_number
 id pin
-id prifile_activity_user_profile_email
-id profile_about_mednow_image_view_show_hide
-id profile_activity_change_password_image_view_show_hide
-id profile_activity_log_out_image_view_show_hide
-id profile_activity_offers_image_view_show_hide
-id profile_activity_orders_image_view_show_hide
-id profile_activity_rate_us_image_view_show_hide
+id profile_activity_user_profile_email
 id profile_activity_user_profile_name
 id profile_activity_user_profile_pic
-id profile_activity_your_gifts_image_view_show_hide
+id profile_edit_text_user_name
+id profile_image_layout
+id profile_image_upload
+id profile_layout_profile_details
 id profile_menu
+id profile_text_edit_btn
+id profile_text_save_btn
 id progressBar
 id progress_bar
 id progress_circular
 id progress_horizontal
+id radial
 id radio
 id rate_menu
 id rectangle
@@ -2224,17 +2289,36 @@ id uniform
 id unknown
 id unlabeled
 id up
+id upload_big_image_view_prescription
 id upload_btn_send_prescription
 id upload_failure_animation
-id upload_image_view_prescription
 id upload_msg_text_view
 id upload_progress_animation
 id upload_success_animation
+id upload_text_view_msg
 id useLogo
 id user_info_edit_text_email
 id user_info_edit_text_name
 id view_offset_helper
-id view_profile
+id view_order_circular_view_timer
+id view_order_image_add_btn
+id view_order_image_close_btn
+id view_order_image_subtract_btn
+id view_order_layout
+id view_order_layout_loader
+id view_order_layout_qty
+id view_order_layout_receipt
+id view_order_lottie_fetch_bill
+id view_order_recycler_view
+id view_order_text_view_cost
+id view_order_text_view_customer_address
+id view_order_text_view_customer_name
+id view_order_text_view_loader_msg
+id view_order_text_view_med_name
+id view_order_text_view_med_price
+id view_order_text_view_pharmacy_address
+id view_order_text_view_pharmacy_name
+id view_order_text_view_qty
 id visible
 id visible_removing_fragment_view_tag
 id walletFragment
@@ -2321,17 +2405,21 @@ layout activity_home
 layout activity_location
 layout activity_login
 layout activity_main
+layout activity_manage_order
+layout activity_order_payment
 layout activity_otp_verify
 layout activity_payment_moderator
 layout activity_profile
 layout activity_upload_prescription
 layout activity_user_info
+layout activity_view_order
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout card_chemist_chat_receiver
 layout card_chemist_chat_sender
 layout card_chemist_list
 layout card_history_item
+layout card_order_med_item
 layout com_facebook_activity_layout
 layout com_facebook_device_auth_dialog_fragment
 layout com_facebook_login_fragment
@@ -2355,9 +2443,12 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout device_credential_handler_activity
+layout dialog_accept_reject
 layout dialog_help
 layout dialog_loader
 layout dialog_upload
+layout fingerprint_dialog_layout
 layout fragment_history
 layout fragment_home
 layout fragment_wallet
@@ -2384,7 +2475,6 @@ layout fui_register_email_layout
 layout fui_welcome_back_email_link_prompt_layout
 layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
-layout history_card_items
 layout home_app_bar
 layout home_content
 layout home_nav_header
@@ -2449,6 +2539,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout ui_progress_pie_indicator
 layout view_pager_helper
 menu bottom_nav_menu
 menu crop_image_menu
@@ -2486,6 +2577,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string accessibility_fingerprint_dialog_help_area
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2536,6 +2628,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirm_device_credential_password
 string crop_image_activity_no_permissions
 string crop_image_activity_title
 string crop_image_menu_crop
@@ -2544,6 +2637,7 @@ string crop_image_menu_flip_horizontally
 string crop_image_menu_flip_vertically
 string crop_image_menu_rotate_left
 string crop_image_menu_rotate_right
+string default_error_msg
 string default_web_client_id
 string display_app_name
 string error_icon_content_description
@@ -2554,6 +2648,13 @@ string facebook_app_id
 string facebook_application_id
 string facebook_login_protocol_scheme
 string fb_login_protocol_scheme
+string fingerprint_dialog_touch_sensor
+string fingerprint_error_hw_not_available
+string fingerprint_error_hw_not_present
+string fingerprint_error_lockout
+string fingerprint_error_no_fingerprints
+string fingerprint_error_user_canceled
+string fingerprint_not_recognized
 string firebase_database_url
 string firebase_web_host
 string fui_accessibility_logo
@@ -2647,6 +2748,7 @@ string fui_welcome_back_idp_header
 string fui_welcome_back_idp_prompt
 string fui_welcome_back_password_prompt_body
 string gcm_defaultSenderId
+string generic_error_user_canceled
 string github_client_id
 string github_client_secret
 string google_api_key
@@ -2930,6 +3032,7 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style CheckoutTheme
+style DeviceCredentialHandlerTheme
 style Dexter_Internal_Theme_Transparent
 style EmptyTheme
 style FirebaseUI
@@ -3254,6 +3357,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style TransparentStyle
 style Widget_App_Button_OutlinedButton_IconOnly
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
@@ -3468,6 +3572,7 @@ styleable AppCompatTextHelper android_textAppearance android_drawableTop android
 styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeMinTextSize autoSizePresetSizes autoSizeStepGranularity autoSizeTextType drawableBottomCompat drawableEndCompat drawableLeftCompat drawableRightCompat drawableStartCompat drawableTint drawableTintMode drawableTopCompat firstBaselineToTopHeight fontFamily fontVariationSettings lastBaselineToBottomHeight lineHeight textAllCaps textLocale
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listChoiceIndicatorMultipleAnimated listChoiceIndicatorSingleAnimated listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingEnd listPreferredItemPaddingLeft listPreferredItemPaddingRight listPreferredItemPaddingStart panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
 styleable Badge backgroundColor badgeGravity badgeTextColor maxCharacterCount number
+styleable BigImageView failureImage failureImageInitScaleType initScaleType optimizeDisplay tapToRetry thumbnailScaleType
 styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll
 styleable BottomNavigationView backgroundTint elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout android_elevation backgroundTint behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_skipCollapsed shapeAppearance shapeAppearanceOverlay
@@ -3536,6 +3641,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable Navigator android_label android_id
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
+styleable ProgressPieView android_textSize android_textColor android_text ppvBackgroundColor ppvCounterclockwise ppvImage ppvInverted ppvMax ppvProgress ppvProgressColor ppvProgressFillType ppvShowStroke ppvShowText ppvStartAngle ppvStrokeColor ppvStrokeWidth ppvTypeface
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
@@ -3549,6 +3655,7 @@ styleable SpacedEditText spacingProportion
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
+styleable SubsamplingScaleImageView assetName panEnabled quickScaleEnabled src tileBackgroundColor zoomEnabled
 styleable SupportVectorDrawablesButton drawableBottomCompat drawableEndCompat drawableStartCompat drawableTopCompat
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors

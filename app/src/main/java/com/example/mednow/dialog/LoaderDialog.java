@@ -21,7 +21,7 @@ public class LoaderDialog {
         this.activity = activity;
     }
 
-    public void startUploadDialog() {
+    public void startLoaderDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         View view = LayoutInflater.from(activity).inflate(R.layout.dialog_loader,null);
         builder.setView(view);

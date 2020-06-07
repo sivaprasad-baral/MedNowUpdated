@@ -15,22 +15,11 @@ public class User {
         this.userId = userId;
     }
 
-    public User(String email, String phone, String name, String userId,int walletBalance) {
+    public User(String email, String phone, String name, String userId, int walletBalance) {
         this.email = email;
         this.phone = phone;
         this.name = name;
         this.userId = userId;
-        this.walletBalance = walletBalance;
-    }
-
-    public User(String email, String phone, String name, String userId, String profileImg, Double latitude, Double longitude, int walletBalance) {
-        this.email = email;
-        this.phone = phone;
-        this.name = name;
-        this.userId = userId;
-        this.profileImg = profileImg;
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.walletBalance = walletBalance;
     }
 

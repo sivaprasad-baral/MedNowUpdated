@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBg"
+    android:gravity="center"
+    tools:context=".OrderPayment"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/order_payment_layout_bill_amt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount for payment"
+            android:fontFamily="@font/alloy_bold"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Amount"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/order_payment_text_view_bill_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Charges"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 10.0"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/order_payment_text_view_total_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorRed"
+                android:textSize="18sp"
+                android:fontFamily="@font/alloy_bold"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Apply discount"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:textColor="@color/colorGreen"
+            android:textSize="15sp"
+            android:fontFamily="@font/alloy_bold"
+            android:onClick="discountOptionBtn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/order_payment_layout_bill_amt">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/colorWhite"
+            android:text="Pay From Wallet"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_bold"
+            android:onClick="walletBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/colorWhite"
+            android:text="Pay With UPI"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_bold"
+            android:onClick="upiBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/colorWhite"
+            android:text="Pay With Card"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_bold"
+            android:onClick="cardBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/colorWhite"
+            android:text="Cash On Delivery"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_bold"
+            android:onClick="codBtn"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

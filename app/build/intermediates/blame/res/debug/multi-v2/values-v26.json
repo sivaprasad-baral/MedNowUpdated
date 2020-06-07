@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sivaprasad\\AndroidStudioProjects\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\Debi\\Desktop\\MedNow\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\a3ea431beab6655154e6b642d1a59244\\jetified-firebase-ui-auth-4.3.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\082567f0d8b8233a5041e72d23e532fb\\jetified-firebase-ui-auth-4.3.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

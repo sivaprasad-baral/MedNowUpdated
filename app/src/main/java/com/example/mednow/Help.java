@@ -109,94 +109,94 @@ public class Help extends AppCompatActivity {
     }
 
     public void orderQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("How can I track my order?","Your order has to be setup with the map and your location has to be used for tracking your order from medicine store to your location");
+        helpDialog.startHelpDialog("How can I track my order?","Your order has to be setup with the map and your location has to be used for tracking your order from medicine store to your location");
     }
 
     public void orderQueryTwoBtn(View view) {
-        helpDialog.startUploadDialog("How do I cancel my order?","Your order can be cancelled from the history segment in your homepage. To cancel an order you have to do it before to delivery and have to make a proper explanation for the order cancellation");
+        helpDialog.startHelpDialog("How do I cancel my order?","Your order can be cancelled from the history segment in your homepage. To cancel an order you have to do it before to delivery and have to make a proper explanation for the order cancellation");
     }
 
     public void orderQueryThreeBtn(View view) {
-        helpDialog.startUploadDialog("Items are missing from my order?","");
+        helpDialog.startHelpDialog("Items are missing from my order?","");
     }
 
     public void orderQueryFourBtn(View view) {
-        helpDialog.startUploadDialog("I want to modify my order?","");
+        helpDialog.startHelpDialog("I want to modify my order?","");
     }
 
     public void orderQueryFiveBtn(View view) {
-        helpDialog.startUploadDialog("Items are different from what I ordered?","");
+        helpDialog.startHelpDialog("Items are different from what I ordered?","");
     }
 
 
     public void orderQuerySixBtn(View view) {
-        helpDialog.startUploadDialog("When will i receive my order?","");
+        helpDialog.startHelpDialog("When will i receive my order?","");
     }
 
 
     public void orderQuerySevenBtn(View view) {
-        helpDialog.startUploadDialog("I am received damaged product?","");
+        helpDialog.startHelpDialog("I am received damaged product?","");
     }
 
     public void deliveryQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("Order status shows 'Delivered' but i have not received my order?","");
+        helpDialog.startHelpDialog("Order status shows 'Delivered' but i have not received my order?","");
     }
 
     public void deliveryQueryTwoBtn(View view) {
-        helpDialog.startUploadDialog("Which cities do we operate in?","");
+        helpDialog.startHelpDialog("Which cities do we operate in?","");
     }
 
     public void deliveryQueryThreeBtn(View view) {
-        helpDialog.startUploadDialog("Can I modify my address after I have placed my order?","");
+        helpDialog.startHelpDialog("Can I modify my address after I have placed my order?","");
     }
 
     public void paymentQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("What are the payment modes?","");
+        helpDialog.startHelpDialog("What are the payment modes?","");
     }
 
     public void paymentQueryTwoBtn(View view) {
-        helpDialog.startUploadDialog("When will I get refund?","");
+        helpDialog.startHelpDialog("When will I get refund?","");
     }
 
 
     public void returnQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("How do I return my order?","");
+        helpDialog.startHelpDialog("How do I return my order?","");
     }
 
     public void returnQueryTwoBtn(View view) {
-        helpDialog.startUploadDialog("Which medicines are eligible for return?","");
+        helpDialog.startHelpDialog("Which medicines are eligible for return?","");
     }
 
     public void returnQueryThreeBtn(View view) {
-        helpDialog.startUploadDialog("I am unable to initiate a return request?","");
+        helpDialog.startHelpDialog("I am unable to initiate a return request?","");
     }
 
     public void returnQueryFourBtn(View view) {
-        helpDialog.startUploadDialog("Does MedNow pick up the products I want to return from my location?","");
+        helpDialog.startHelpDialog("Does MedNow pick up the products I want to return from my location?","");
     }
 
     public void returnQueryFiveBtn(View view) {
-        helpDialog.startUploadDialog("When will I get refund?","");
+        helpDialog.startHelpDialog("When will I get refund?","");
     }
 
     public void walletQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("What is MNO cash?","");
+        helpDialog.startHelpDialog("What is MNO cash?","");
     }
 
     public void walletQueryTwoBtn(View view) {
-        helpDialog.startUploadDialog("Can I add money to MedNow wallet?","");
+        helpDialog.startHelpDialog("Can I add money to MedNow wallet?","");
     }
 
     public void walletQueryThreeBtn(View view) {
-        helpDialog.startUploadDialog("When will my cash expire?","");
+        helpDialog.startHelpDialog("When will my cash expire?","");
     }
 
     public void walletQueryFourBtn(View view) {
-        helpDialog.startUploadDialog("Can I transfer MNO cash to bank account?","");
+        helpDialog.startHelpDialog("Can I transfer MNO cash to bank account?","");
     }
 
     public void walletQueryFiveBtn(View view) {
-        helpDialog.startUploadDialog("How do I check my MNO cash?","");
+        helpDialog.startHelpDialog("How do I check my MNO cash?","");
     }
 
     public void showHidePrescriptionHelpBtn(View view) {
@@ -212,11 +212,11 @@ public class Help extends AppCompatActivity {
     }
 
     public void prescriptionQueryOneBtn(View view) {
-        helpDialog.startUploadDialog("Where do i send my prescription?","");
+        helpDialog.startHelpDialog("Where do i send my prescription?","");
     }
 
     public void prescriptionQuerySevenBtn(View view) {
-        helpDialog.startUploadDialog("What is a valid prescription?","");
+        helpDialog.startHelpDialog("What is a valid prescription?","");
     }
 
     public void showHideGeneralQueriesHelpBtn(View view) {
@@ -232,27 +232,27 @@ public class Help extends AppCompatActivity {
     }
 
     public void generalQueriesOneBtn(View view) {
-        helpDialog.startUploadDialog("Are there any shipping charges for order?","");
+        helpDialog.startHelpDialog("Are there any shipping charges for order?","");
     }
 
     public void generalQueriesTwoBtn(View view) {
-        helpDialog.startUploadDialog("What is MedNow?","");
+        helpDialog.startHelpDialog("What is MedNow?","");
     }
 
     public void generalQueriesThreeBtn(View view) {
-        helpDialog.startUploadDialog("Why did I not receive OTP on SMS?","");
+        helpDialog.startHelpDialog("Why did I not receive OTP on SMS?","");
     }
 
     public void generalQueriesFourBtn(View view) {
-        helpDialog.startUploadDialog("How can I change my mail address linkd to my account?","");
+        helpDialog.startHelpDialog("How can I change my mail address linkd to my account?","");
     }
 
     public void generalQueriesFiveBtn(View view) {
-        helpDialog.startUploadDialog("How do I become a partner?","");
+        helpDialog.startHelpDialog("How do I become a partner?","");
     }
 
     public void generalQueriesSixBtn(View view) {
-        helpDialog.startUploadDialog("What is th procedure to place an order?","");
+        helpDialog.startHelpDialog("What is th procedure to place an order?","");
     }
 
     public void showHidePromotionHelpBtn(View view) {

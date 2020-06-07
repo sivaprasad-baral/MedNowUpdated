@@ -81,4 +81,12 @@ dependencies {
 
     // Razor pay dependency
     implementation 'com.razorpay:checkout:1.5.17'
+
+    // Image zoom dependency
+    implementation 'com.github.piasy:BigImageViewer:1.6.5'
+    implementation 'com.github.piasy:GlideImageLoader:1.6.5'
+    implementation 'com.github.piasy:ProgressPieIndicator:1.6.5'
+
+    // Biometric dependency
+    implementation "androidx.biometric:biometric:1.0.1"
 }

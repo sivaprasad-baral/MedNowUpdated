@@ -34,18 +34,19 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class HomeFragment extends Fragment implements ChemistAdapter.PharmacyClickListener {
 
-    private ArrayList<Partner> partners;
-    private Double distance;
+    private List<Partner> partners;
+    private List<Double> distances;
+    private double distance;
     private User user;
     private static DecimalFormat distanceFormat = new DecimalFormat("#.##");
 
     private RecyclerView recyclerView;
-    private TextView textViewStores;
-    private EditText editTextSearch;
+    public static TextView textViewStores;
     private ChemistAdapter chemistAdapter;
 
     private FirebaseUser firebaseUser;
@@ -57,12 +58,12 @@ public class HomeFragment extends Fragment implements ChemistAdapter.PharmacyCli
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
         textViewStores = view.findViewById(R.id.home_fragment_text_view_stores);
-        editTextSearch = view.findViewById(R.id.home_fragment_edit_text_search);
+        EditText editTextSearch = view.findViewById(R.id.home_fragment_edit_text_search);
         recyclerView = view.findViewById(R.id.home_fragment_recycler_view);
         ViewPager viewPager = view.findViewById(R.id.home_fragment_view_pager);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(Objects.requireNonNull(container).getContext()));
-        chemistAdapter = new ChemistAdapter(container.getContext(),new ArrayList<Partner>(),HomeFragment.this);
+        chemistAdapter = new ChemistAdapter(container.getContext(),new ArrayList<Partner>(),0,0,HomeFragment.this);
         recyclerView.setAdapter(chemistAdapter);
 
         viewPager.setAdapter(new ViewPagerAdapter(container.getContext()));
@@ -105,9 +106,12 @@ public class HomeFragment extends Fragment implements ChemistAdapter.PharmacyCli
 
     private void getClosestPharmacy(final ViewGroup container) {
         partners = new ArrayList<>();
+        distances = new ArrayList<>();
         databaseReferencePartners.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                partners.clear();
+                distances.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Partner partner = snapshot.getValue(Partner.class);
                     if(!firebaseUser.getUid().equals(Objects.requireNonNull(partner).getUserId())) {
@@ -120,13 +124,22 @@ public class HomeFragment extends Fragment implements ChemistAdapter.PharmacyCli
                                 }
                             }
                             if(c == 0) {
-                                partners.add(partner);
+                                int pos = 0;
+                                for(double d : distances) {
+                                    if(d > distance) {
+                                        pos++;
+                                    } else {
+                                        break;
+                                    }
+                                }
+                                distances.add(pos,distance);
+                                partners.add(pos,partner);
                             }
                         }
                     }
                 }
                 if(!partners.isEmpty()) {
-                    chemistAdapter = new ChemistAdapter(container.getContext(),partners,HomeFragment.this);
+                    chemistAdapter = new ChemistAdapter(container.getContext(),partners,user.getLatitude(),user.getLongitude(),HomeFragment.this);
                     recyclerView.setAdapter(chemistAdapter);
                     String storeText = "Stores near you";
                     textViewStores.setText(storeText);

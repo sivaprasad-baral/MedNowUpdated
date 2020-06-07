@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sivaprasad\\AndroidStudioProjects\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "C:\\Users\\Debi\\Desktop\\MedNow\\MedNow\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sivaprasad\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\Debi\\.gradle\\caches\\transforms-2\\files-2.1\\694eb0b7035de2fbfcae25bbcd1a4027\\appcompat-1.1.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

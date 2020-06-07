@@ -4,18 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.mednow.dialog.UploadDialog;
-import com.example.mednow.model.Prescription;
+import com.example.mednow.model.Order;
+import com.github.piasy.biv.BigImageViewer;
+import com.github.piasy.biv.loader.glide.GlideImageLoader;
+import com.github.piasy.biv.view.BigImageView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,7 +37,7 @@ public class UploadPrescription extends AppCompatActivity {
     String chemistUserId;
     Uri filePath;
 
-    ImageView imageViewPrescription;
+    BigImageView bigImageViewPrescription;
     UploadDialog uploadDialog;
 
     FirebaseUser firebaseUser;
@@ -47,16 +47,17 @@ public class UploadPrescription extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BigImageViewer.initialize(GlideImageLoader.with(UploadPrescription.this));
         setContentView(R.layout.activity_upload_prescription);
 
-        imageViewPrescription = findViewById(R.id.upload_image_view_prescription);
+        bigImageViewPrescription = findViewById(R.id.upload_big_image_view_prescription);
         uploadDialog = new UploadDialog(UploadPrescription.this);
 
         CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(UploadPrescription.this);
 
         chemistUserId = getIntent().getStringExtra("partnerUserId");
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        databaseReference = FirebaseDatabase.getInstance().getReference("Prescriptions");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Orders");
         storageReference = FirebaseStorage.getInstance().getReference("Prescriptions/" + UUID.randomUUID().toString());
     }
 
@@ -66,7 +67,7 @@ public class UploadPrescription extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             filePath = result.getUri();
-            Glide.with(UploadPrescription.this).load(filePath).into(imageViewPrescription);
+            bigImageViewPrescription.showImage(filePath);
         } else {
             finish();
             Toast.makeText(UploadPrescription.this,"No image detected",Toast.LENGTH_SHORT).show();
@@ -82,14 +83,15 @@ public class UploadPrescription extends AppCompatActivity {
                     Objects.requireNonNull(Objects.requireNonNull(taskSnapshot.getMetadata()).getReference()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            String prescriptionId = databaseReference.push().getKey();
-                            Prescription prescription = new Prescription(firebaseUser.getUid(),chemistUserId,uri.toString(),prescriptionId);
-                            databaseReference.child(Objects.requireNonNull(prescriptionId)).setValue(prescription);
+                            final String orderId = databaseReference.push().getKey();
+                            Order order = new Order(chemistUserId,firebaseUser.getUid(),orderId,uri.toString(),System.currentTimeMillis()/1000);
+                            databaseReference.child(Objects.requireNonNull(orderId)).setValue(order);
                             uploadDialog.setUploadSuccess("Prescription Upload Successful");
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
                                     uploadDialog.dismissDialog();
+                                    startActivity(new Intent(UploadPrescription.this,ViewOrder.class).putExtra("orderId",orderId).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                 }
                             },4000);
                         }

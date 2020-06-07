@@ -22,6 +22,8 @@ import java.util.Objects;
 
 public class UserInfo extends AppCompatActivity {
 
+    boolean activityOpenStatus = true;
+
     String name,email;
 
     EditText editTextName,editTextEmail;
@@ -67,6 +69,7 @@ public class UserInfo extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()) {
+                                            activityOpenStatus = false;
                                             startActivity(new Intent(UserInfo.this,Location.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                         } else {
                                             Toast.makeText(UserInfo.this, Objects.requireNonNull(task.getException()).getMessage(),Toast.LENGTH_SHORT).show();
@@ -87,6 +90,7 @@ public class UserInfo extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        activityOpenStatus = false;
         databaseReference.removeValue();
         firebaseUser.delete();
         startActivity(new Intent(UserInfo.this,Login.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));

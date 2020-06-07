@@ -31,9 +31,10 @@ import java.util.Objects;
 
 public class ChemistInfo extends AppCompatActivity {
 
+    boolean activityOpenStatus = true;
     String partnerUserId;
     Double distance;
-    boolean displayInfo = false,activityOpenStatus = true;
+    boolean displayInfo = false;
     Partner partner;
 
     TextView textViewPharmacyName,textViewOwnerName,textViewOwnerMobile,textViewOwnerEmail;
@@ -71,7 +72,7 @@ public class ChemistInfo extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(activityOpenStatus) {
                     partner = dataSnapshot.getValue(Partner.class);
-                    if(partner.getPharmacyImg() == null) {
+                    if(Objects.requireNonNull(partner).getPharmacyImg() == null) {
                         Glide.with(ChemistInfo.this).load(R.drawable.image_not_available).into(imageViewPharmacyImg);
                     } else {
                         Glide.with(ChemistInfo.this).load(Uri.parse(partner.getPharmacyImg())).into(imageViewPharmacyImg);
@@ -92,7 +93,10 @@ public class ChemistInfo extends AppCompatActivity {
                         Geocoder geocoder = new Geocoder(ChemistInfo.this, Locale.getDefault());
                         List<Address> addresses;
                         addresses = geocoder.getFromLocation(partner.getLatitude(),partner.getLongitude(),1);
-                        String address = addresses.get(0).getAddressLine(0);
+                        String fullAddress = addresses.get(0).getAddressLine(0);
+                        String[] addressList = fullAddress.split(",");
+                        int l = addressList.length;
+                        String address = addressList[l-4].trim() + "," + addressList[l-3] + "," + addressList[l-2];
                         textViewPharmacyAddress.setText(address);
                     } catch (IOException e) {
                         Toast.makeText(ChemistInfo.this,e.getMessage(),Toast.LENGTH_SHORT).show();
@@ -120,6 +124,7 @@ public class ChemistInfo extends AppCompatActivity {
 
     public void chatBtn(View view) {
         if(partner.isAvailable()) {
+            activityOpenStatus = false;
             startActivity(new Intent(ChemistInfo.this,ChemistChat.class).putExtra("partnerUserId",partnerUserId));
         } else {
             Toast.makeText(ChemistInfo.this,"Currently not receiving orders",Toast.LENGTH_SHORT).show();
@@ -128,6 +133,7 @@ public class ChemistInfo extends AppCompatActivity {
 
     public void uploadBtn(View view) {
         if(partner.isAvailable()) {
+            activityOpenStatus = false;
             startActivity(new Intent(ChemistInfo.this,UploadPrescription.class).putExtra("partnerUserId",partnerUserId));
         } else {
             Toast.makeText(ChemistInfo.this,"Currently not receiving orders",Toast.LENGTH_SHORT).show();

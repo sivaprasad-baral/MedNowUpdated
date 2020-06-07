@@ -29,6 +29,7 @@ import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
 public class OtpVerify extends AppCompatActivity {
 
     String verificationCode; // Verification code sent from firebase
+    boolean activityOpenStatus = true;
 
     EditText editTextOTP;
     CircularView circularViewTimer;
@@ -48,11 +49,7 @@ public class OtpVerify extends AppCompatActivity {
         editTextOTP = findViewById(R.id.otp_verify_edit_text_otp);
         textViewResend = findViewById(R.id.otp_verify_text_view_resend);
         circularViewTimer = findViewById(R.id.otp_verify_circular_view_timer);
-        builderWithTimer = new CircularView.OptionsBuilder()
-                .shouldDisplayText(true)
-                .setCounterInSeconds(59)
-                .setCircularViewCallback(new CircularViewCallback() {
-
+        builderWithTimer = new CircularView.OptionsBuilder().shouldDisplayText(true).setCounterInSeconds(59).setCircularViewCallback(new CircularViewCallback() {
                     @Override
                     public void onTimerFinish() {
                         textViewResend.setVisibility(View.VISIBLE);
@@ -79,7 +76,6 @@ public class OtpVerify extends AppCompatActivity {
     }
 
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
         @Override
         public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
@@ -116,6 +112,7 @@ public class OtpVerify extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
                     firebaseUser = firebaseAuth.getCurrentUser();
+                    activityOpenStatus = false;
                     if(Objects.requireNonNull(firebaseUser).getDisplayName() == null) {
                         startActivity(new Intent(OtpVerify.this,UserInfo.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                     } else {
@@ -138,6 +135,7 @@ public class OtpVerify extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        activityOpenStatus = false;
         circularViewTimer.stopTimer();
         firebaseAuth.signOut();
         super.onBackPressed();
