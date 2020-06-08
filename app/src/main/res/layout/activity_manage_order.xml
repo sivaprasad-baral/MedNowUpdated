@@ -1,9 +1,546 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGreyBg"
     tools:context=".ManageOrder">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manage_order_user_name"
+            android:text="Sivaprasad Baral"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/alloy_bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manage_order_user_orderId"
+            android:text="Order ID - 1234"
+            android:layout_marginLeft="20dp"
+            android:textSize="12sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="70dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_one"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_one_MRP"
+                    android:layout_below="@id/manage_order_medicine_one"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_one_best_price"
+                    android:layout_below="@id/manage_order_medicine_one_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_one_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_two"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_two_MRP"
+                    android:layout_below="@id/manage_order_medicine_two"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_two_best_price"
+                    android:layout_below="@id/manage_order_medicine_two_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_two_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_three"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_three_MRP"
+                    android:layout_below="@id/manage_order_medicine_three"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_three_best_price"
+                    android:layout_below="@id/manage_order_medicine_three_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_three_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_four"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_four_MRP"
+                    android:layout_below="@id/manage_order_medicine_four"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_four_best_price"
+                    android:layout_below="@id/manage_order_medicine_four_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_four_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_five"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_five_MRP"
+                    android:layout_below="@id/manage_order_medicine_five"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_five_best_price"
+                    android:layout_below="@id/manage_order_medicine_five_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_five_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/manage_order_button_rounded"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUTIN 50 MG (STRIP OF 10 TABLETS)"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/alloy_bold"
+                    android:id="@+id/manage_order_medicine_six"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRP 50"
+                    android:id="@+id/manage_order_medicine_six_MRP"
+                    android:layout_below="@id/manage_order_medicine_six"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Best Price 30"
+                    android:id="@+id/manage_order_medicine_six_best_price"
+                    android:layout_below="@id/manage_order_medicine_six_MRP"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manage_order_medicine_six_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:text="10"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@color/colorGreyBg"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tablets"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="80dp"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreyBg"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/manage_order_tracking_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manage_order_tracking_order_btn"
+            android:text="Track Order"
+            android:textSize="12sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manage_order_cancel_order_btn"
+            android:text="Cancel Order"
+            android:layout_toRightOf="@id/manage_order_tracking_order_btn"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
